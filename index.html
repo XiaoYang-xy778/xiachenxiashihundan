@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>夏辰骁是混蛋.COM — 全网唯一官方认证</title>
+<meta name="description" content="夏辰骁是混蛋.COM，一个关于「夏辰骁到底有多混蛋」的非官方、不严肃、不承担法律责任的观察站。">
+<meta property="og:title" content="夏辰骁是混蛋.COM">
+<meta property="og:description" content="全网唯一官方认证的混蛋观察站。点进来，一起控诉。">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💢</text></svg>">
+<script>document.documentElement.classList.add("js");</script>
+<style>
+  /* ============ 设计变量 ============ */
+  :root{
+    --bg:#08060d;
+    --bg-soft:#100b1a;
+    --card:rgba(255,255,255,.045);
+    --line:rgba(255,255,255,.1);
+    --text:#f2eef8;
+    --muted:#9c93b3;
+    --pink:#ff2e63;
+    --pink-soft:#ff6b8f;
+    --cyan:#22e0ff;
+    --gold:#ffd166;
+    --violet:#8b5cf6;
+    --radius:20px;
+    --font:"Noto Sans SC","PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,-apple-system,sans-serif;
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:var(--font);
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.7;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+    transition:background .6s ease,color .6s ease;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;z-index:-2;
+    background:
+      radial-gradient(900px 600px at 12% -8%, rgba(255,46,99,.22), transparent 60%),
+      radial-gradient(800px 520px at 88% 4%, rgba(34,224,255,.14), transparent 62%),
+      radial-gradient(700px 700px at 50% 110%, rgba(139,92,246,.18), transparent 65%);
+    pointer-events:none;
+  }
+  /* 噪点纹理 */
+  body::after{
+    content:"";
+    position:fixed;inset:0;z-index:-1;opacity:.35;pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E");
+    mix-blend-mode:overlay;
+  }
+  ::selection{background:var(--pink);color:#fff}
+
+  a{color:inherit}
+  img,svg{display:block;max-width:100%}
+
+  .wrap{width:min(1120px,calc(100% - 44px));margin-inline:auto}
+
+  /* ============ 顶部导航 ============ */
+  header{
+    position:sticky;top:0;z-index:50;
+    backdrop-filter:blur(18px) saturate(140%);
+    background:linear-gradient(to bottom, rgba(8,6,13,.9), rgba(8,6,13,.55));
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.02em;text-decoration:none}
+  .brand-mark{
+    width:34px;height:34px;flex:none;border-radius:11px;
+    display:grid;place-items:center;font-size:17px;
+    background:linear-gradient(135deg,var(--pink),var(--violet));
+    box-shadow:0 8px 22px -8px var(--pink);
+  }
+  .brand-txt{font-size:15px;white-space:nowrap}
+  .brand-txt small{display:block;font-size:10px;font-weight:600;color:var(--muted);letter-spacing:.18em}
+  .nav-links{display:flex;align-items:center;gap:6px}
+  .nav-links a{
+    text-decoration:none;font-size:13.5px;font-weight:600;color:var(--muted);
+    padding:8px 12px;border-radius:999px;transition:.25s;
+  }
+  .nav-links a:hover{color:var(--text);background:rgba(255,255,255,.07)}
+  .live{
+    display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:700;
+    color:var(--cyan);border:1px solid rgba(34,224,255,.35);
+    background:rgba(34,224,255,.08);padding:6px 12px;border-radius:999px;white-space:nowrap;
+  }
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 0 rgba(34,224,255,.7);animation:pulse 2s infinite}
+  @keyframes pulse{70%{box-shadow:0 0 0 7px rgba(34,224,255,0)}100%{box-shadow:0 0 0 0 rgba(34,224,255,0)}}
+
+  /* ============ 首屏 ============ */
+  .hero{position:relative;padding:clamp(48px,9vw,104px) 0 clamp(28px,4vw,46px);text-align:center}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:9px;
+    font-size:12px;font-weight:700;letter-spacing:.22em;color:var(--gold);
+    border:1px solid rgba(255,209,102,.3);background:rgba(255,209,102,.07);
+    padding:7px 15px;border-radius:999px;margin-bottom:26px;
+  }
+  h1.title{
+    margin:0;font-size:clamp(2.6rem,11.4vw,8.2rem);line-height:.98;
+    font-weight:900;letter-spacing:-.02em;
+  }
+  .glitch{
+    position:relative;display:inline-block;
+    background:linear-gradient(100deg,#fff 8%,var(--pink-soft) 38%,var(--pink) 58%,#fff 92%);
+    background-size:220% 100%;
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    animation:shine 7s linear infinite;
+    filter:drop-shadow(0 18px 60px rgba(255,46,99,.28));
+  }
+  @keyframes shine{to{background-position:220% 0}}
+  .glitch::before,.glitch::after{
+    content:attr(data-text);position:absolute;inset:0;
+    background:inherit;-webkit-background-clip:text;background-clip:text;
+    color:transparent;opacity:0;pointer-events:none;
+  }
+  .glitch::before{-webkit-text-fill-color:var(--cyan);clip-path:inset(6% 0 56% 0);animation:gl1 4.6s infinite steps(1)}
+  .glitch::after{-webkit-text-fill-color:var(--pink);clip-path:inset(54% 0 6% 0);animation:gl2 5.4s infinite steps(1)}
+  @keyframes gl1{0%,87%,100%{transform:translate(0,0);opacity:0}89%{transform:translate(-5px,-2px);opacity:.85}92%{transform:translate(3px,1px);opacity:.7}95%{transform:translate(-1px,0);opacity:0}}
+  @keyframes gl2{0%,83%,100%{transform:translate(0,0);opacity:0}85%{transform:translate(5px,2px);opacity:.8}89%{transform:translate(-3px,-1px);opacity:.65}93%{transform:translate(1px,0);opacity:0}}
+
+  .domain{
+    display:flex;flex-wrap:wrap;justify-content:center;gap:6px 14px;margin-top:22px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:clamp(11px,2.2vw,13px);color:var(--muted);letter-spacing:.06em;
+  }
+  .domain span{white-space:nowrap}
+  .domain .puny{opacity:.72}
+  .domain b{color:var(--cyan);font-weight:600}
+  .lead{
+    max-width:660px;margin:26px auto 0;color:#cfc6e0;
+    font-size:clamp(15px,2.1vw,17.5px);
+  }
+  .lead em{font-style:normal;color:#fff;font-weight:700;background:linear-gradient(transparent 62%,rgba(255,46,99,.5) 62%)}
+
+  .cta{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:34px}
+  .btn{
+    appearance:none;border:0;cursor:pointer;font-family:inherit;
+    font-size:15px;font-weight:800;letter-spacing:.02em;
+    padding:15px 30px;border-radius:999px;color:#fff;
+    background:linear-gradient(135deg,var(--pink),#c026d3);
+    box-shadow:0 16px 34px -14px rgba(255,46,99,.9), inset 0 1px 0 rgba(255,255,255,.35);
+    transition:transform .18s cubic-bezier(.2,.9,.3,1.3),box-shadow .25s,filter .25s;
+    position:relative;overflow:hidden;
+  }
+  .btn:hover{transform:translateY(-2px) scale(1.02);filter:brightness(1.08);box-shadow:0 20px 40px -14px rgba(255,46,99,1)}
+  .btn:active{transform:translateY(1px) scale(.99)}
+  .btn.ghost{
+    background:rgba(255,255,255,.06);color:var(--text);
+    border:1px solid var(--line);box-shadow:none;
+  }
+  .btn.ghost:hover{background:rgba(255,255,255,.12);box-shadow:none}
+  .btn:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+
+  /* ============ 数据条 ============ */
+  .stats{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:1px;margin-top:clamp(40px,6vw,64px);
+    background:var(--line);border:1px solid var(--line);
+    border-radius:var(--radius);overflow:hidden;
+  }
+  .stat{background:rgba(11,8,18,.72);padding:22px 18px;text-align:center}
+  .stat b{display:block;font-size:clamp(1.5rem,4vw,2rem);font-weight:900;letter-spacing:-.01em;
+    font-variant-numeric:tabular-nums;
+    background:linear-gradient(180deg,#fff,var(--pink-soft));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .stat span{font-size:12px;color:var(--muted);letter-spacing:.12em;font-weight:600}
+
+  /* ============ 通用区块 ============ */
+  section{padding:clamp(56px,9vw,110px) 0;position:relative}
+  .sec-head{max-width:680px;margin-bottom:clamp(30px,5vw,52px)}
+  .sec-tag{
+    font-size:11.5px;font-weight:800;letter-spacing:.24em;color:var(--pink-soft);
+    text-transform:uppercase;display:flex;align-items:center;gap:10px;margin-bottom:14px;
+  }
+  .sec-tag::before{content:"";width:26px;height:2px;background:var(--pink);border-radius:2px}
+  h2{font-size:clamp(1.75rem,4.4vw,2.7rem);line-height:1.2;margin:0 0 14px;font-weight:900;letter-spacing:-.01em}
+  .sec-head p{margin:0;color:var(--muted);font-size:15.5px}
+
+  /* ============ 罪状卡片 ============ */
+  .crimes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+  .crime{
+    position:relative;padding:26px 24px 24px;border-radius:var(--radius);
+    background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02));
+    border:1px solid var(--line);
+    transition:transform .35s cubic-bezier(.2,.8,.3,1),border-color .35s,background .35s,box-shadow .35s;
+    overflow:hidden;
+  }
+  .crime::after{
+    content:"";position:absolute;inset:0;opacity:0;transition:opacity .4s;
+    background:radial-gradient(420px 220px at var(--mx,50%) var(--my,0%),rgba(255,46,99,.16),transparent 70%);
+  }
+  .crime:hover{transform:translateY(-6px);border-color:rgba(255,46,99,.42);box-shadow:0 26px 50px -30px rgba(255,46,99,.85)}
+  .crime:hover::after{opacity:1}
+  .crime-no{
+    font-family:ui-monospace,monospace;font-size:11px;font-weight:700;color:var(--muted);
+    letter-spacing:.18em;display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;
+  }
+  .badge{
+    font-size:10.5px;letter-spacing:.08em;padding:3px 9px;border-radius:999px;font-weight:800;
+    border:1px solid rgba(255,209,102,.32);color:var(--gold);background:rgba(255,209,102,.08);
+  }
+  .crime .ico{font-size:26px;line-height:1;margin-bottom:12px}
+  .crime h3{margin:0 0 8px;font-size:17.5px;font-weight:800;letter-spacing:.01em}
+  .crime p{margin:0;font-size:14px;color:var(--muted);line-height:1.75}
+  .severity{margin-top:18px;display:flex;align-items:center;gap:9px;font-size:11px;color:var(--muted);font-weight:700;letter-spacing:.06em}
+  .bar{flex:1;height:5px;border-radius:99px;background:rgba(255,255,255,.09);overflow:hidden}
+  .bar i{display:block;height:100%;border-radius:99px;width:0;transition:width 1.2s cubic-bezier(.2,.8,.2,1);
+    background:linear-gradient(90deg,var(--gold),var(--pink))}
+  .crime.in .bar i{width:var(--w)}
+
+  /* ============ 证言跑马灯 ============ */
+  .quotes{padding-block:clamp(40px,6vw,70px);border-block:1px solid var(--line);overflow:hidden;background:rgba(255,255,255,.015)}
+  .row{display:flex;gap:14px;width:max-content;padding-block:8px;
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);
+    mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}
+  .row.a{animation:slide 42s linear infinite}
+  .row.b{animation:slide 52s linear infinite reverse}
+  @keyframes slide{to{transform:translateX(-50%)}}
+  .quotes:hover .row{animation-play-state:paused}
+  .quote{
+    flex:none;max-width:330px;padding:16px 20px;border-radius:16px;
+    background:rgba(255,255,255,.05);border:1px solid var(--line);
+    font-size:13.5px;color:#d8d0e6;
+  }
+  .quote b{display:block;font-size:11px;color:var(--muted);font-weight:700;letter-spacing:.1em;margin-top:8px}
+  .row.b .quote{background:rgba(255,46,99,.06);border-color:rgba(255,46,99,.2)}
+
+  /* ============ 判决 ============ */
+  .verdict{
+    display:grid;grid-template-columns:1.35fr .95fr;gap:clamp(22px,4vw,42px);align-items:center;
+    padding:clamp(26px,4vw,44px);border-radius:28px;
+    background:
+      linear-gradient(150deg,rgba(255,255,255,.075),rgba(255,255,255,.02)),
+      radial-gradient(600px 300px at 100% 0%,rgba(255,46,99,.16),transparent 65%);
+    border:1px solid rgba(255,255,255,.13);
+    box-shadow:0 40px 80px -50px #000;
+  }
+  .verdict h3{margin:0 0 8px;font-size:clamp(1.3rem,3vw,1.85rem);font-weight:900}
+  .verdict p{margin:0 0 22px;color:var(--muted);font-size:14.5px}
+  .gauge{display:flex;align-items:baseline;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+  .gauge output{font-size:clamp(2.4rem,7vw,3.6rem);font-weight:900;line-height:1;
+    font-variant-numeric:tabular-nums;color:#fff;text-shadow:0 0 26px rgba(255,46,99,.6)}
+  .gauge span{font-size:13px;color:var(--muted);font-weight:700}
+  .meter{height:12px;border-radius:99px;background:rgba(255,255,255,.08);overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+  .meter i{display:block;height:100%;width:0;border-radius:99px;
+    background:linear-gradient(90deg,var(--cyan),var(--violet),var(--pink));
+    box-shadow:0 0 22px rgba(255,46,99,.75);transition:width 1.8s cubic-bezier(.2,.9,.2,1)}
+  .verdict.in .meter i{width:var(--p,97%)}
+  .meter-legend{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:9px;font-weight:700;letter-spacing:.06em}
+  .stamp{
+    justify-self:center;text-align:center;padding:20px 22px;border-radius:18px;
+    border:3px double rgba(255,46,99,.6);color:var(--pink-soft);
+    transform:rotate(-7deg);background:rgba(255,46,99,.05);
+    box-shadow:inset 0 0 30px rgba(255,46,99,.12);
+  }
+  .stamp b{display:block;font-size:clamp(1.1rem,3.2vw,1.5rem);font-weight:900;letter-spacing:.14em}
+  .stamp small{font-size:10.5px;letter-spacing:.2em;color:var(--muted);font-weight:700}
+
+  /* ============ 和解模式 ============ */
+  .heal{text-align:center;padding:clamp(50px,8vw,90px) 0}
+  .heal p{color:var(--muted);max-width:520px;margin:0 auto 24px;font-size:15px}
+  #healBtn{background:linear-gradient(135deg,#22e0ff,#8b5cf6);box-shadow:0 16px 34px -14px rgba(34,224,255,.85), inset 0 1px 0 rgba(255,255,255,.3)}
+
+  body.healed{
+    --bg:#100c14;--bg-soft:#1a1320;--line:rgba(255,209,102,.18);
+    --pink:#ffd166;--pink-soft:#ffe29a;
+  }
+  body.healed .glitch{
+    background:linear-gradient(100deg,#fff,var(--gold),#fff);
+    background-size:220% 100%;
+    -webkit-background-clip:text;background-clip:text;
+  }
+  body.healed .verdict{border-color:rgba(255,209,102,.35)}
+
+  /* ============ 页脚 ============ */
+  footer{border-top:1px solid var(--line);padding:44px 0 60px;background:rgba(0,0,0,.35)}
+  .foot{display:flex;flex-wrap:wrap;gap:22px;justify-content:space-between;align-items:flex-start}
+  .foot p{margin:0;font-size:12.5px;color:var(--muted);max-width:560px;line-height:1.85;overflow-wrap:break-word}
+  .foot strong{color:var(--text)}
+  .foot .mono{font-family:ui-monospace,monospace;font-size:11.5px;color:var(--muted);margin-top:10px;overflow-wrap:anywhere}
+  .to-top{
+    text-decoration:none;font-size:12.5px;font-weight:700;color:var(--text);
+    border:1px solid var(--line);padding:9px 16px;border-radius:999px;transition:.25s;white-space:nowrap;
+  }
+  .to-top:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.28)}
+
+  /* ============ 出场动画（仅有 JS 时隐藏，保证无脚本也能阅读） ============ */
+  .js .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}
+  .js .reveal.in{opacity:1;transform:none}
+
+  /* ============ 点击特效 ============ */
+  .pop{
+    position:fixed;z-index:999;pointer-events:none;font-size:26px;
+    will-change:transform,opacity;animation:pop 1s cubic-bezier(.2,.7,.3,1) forwards;
+  }
+  @keyframes pop{
+    0%{transform:translate(-50%,-50%) scale(.4) rotate(0);opacity:1}
+    100%{transform:translate(-50%,-190%) scale(1.5) rotate(var(--r,12deg));opacity:0}
+  }
+
+  /* ============ 响应式 ============ */
+  @media (max-width:860px){
+    .verdict{grid-template-columns:1fr;text-align:left}
+    .stamp{justify-self:start;transform:rotate(-3deg)}
+    .nav-links a:not(.keep){display:none}
+  }
+  @media (max-width:520px){
+    .wrap{width:calc(100% - 32px)}
+    .hero{padding-top:40px}
+    .cta .btn{flex:1;padding-inline:18px}
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .crime{transform:none!important}
+  }
+
+  /* ============ 减少动效 ============ */
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+    html{scroll-behavior:auto}
+    .js .reveal{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap nav" aria-label="主导航">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">💢</span>
+      <span class="brand-txt">夏辰骁是混蛋<small>.COM</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="#crimes">罪状</a>
+      <a href="#quotes">证言</a>
+      <a href="#verdict">判决</a>
+      <span class="live keep"><span class="dot"></span><span id="online">1,024</span> 人在线</span>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ================= 首屏 ================= -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">✦ 全网唯一官方认证 · 非官方发布 ✦</span>
+      <h1 class="title">
+        <span class="glitch" data-text="夏辰骁是混蛋">夏辰骁是混蛋</span>
+      </h1>
+      <div class="domain"><span>官方网址：<b>夏辰骁是混蛋.com</b></span><span class="puny">xn--0rs681a04foy1ah2jyyp.com</span></div>
+      <p class="lead">
+        经本站不完全统计，夏辰骁已在 <em>吃饭不叫、消息已读不回、抢最后一块排骨</em> 等
+        领域创下多项纪录。本页面将长期、稳定、严肃地记录这一切。
+      </p>
+      <div class="cta">
+        <button class="btn" id="sueBtn" type="button">🔥 我也要控诉</button>
+        <a class="btn ghost" href="#crimes">看看他干了什么</a>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><b id="sueCount">23,333</b><span>累计控诉人次</span></div>
+        <div class="stat"><b id="crimeCount">6</b><span>已确认罪状</span></div>
+        <div class="stat"><b>99.7<small style="font-size:.55em">%</small></b><span>受害者认同度</span></div>
+        <div class="stat"><b>0</b><span>他本人道歉次数</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 罪状 ================= -->
+  <section id="crimes">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-tag">CASE FILES</div>
+        <h2>已确认的六大罪状</h2>
+        <p>以下记录均来自匿名热心群众口述，未经核实，但大家都说真的。</p>
+      </div>
+
+      <div class="crimes">
+        <article class="crime reveal" style="--w:94%">
+          <div class="crime-no"><span>NO.001</span><span class="badge">情节严重</span></div>
+          <div class="ico" aria-hidden="true">🍗</div>
+          <h3>吃饭永远最后到，却第一个动筷</h3>
+          <p>约的七点，八点二十才出现，理由是「路上有点堵」。坐下三分钟，排骨没了。</p>
+          <div class="severity">恶劣程度 <span class="bar"><i></i></span> 94</div>
+        </article>
+
+        <article class="crime reveal" style="--w:88%">
+          <div class="crime-no"><span>NO.002</span><span class="badge">人神共愤</span></div>
+          <div class="ico" aria-hidden="true">📱</div>
+          <h3>已读不回，但在群里活蹦乱跳</h3>
+          <p>私聊三天不回，群聊一秒接梗。手机没坏，只是你的消息不配拥有通知。</p>
+          <div class="severity">恶劣程度 <span class="bar"><i></i></span> 88</div>
+        </article>
+
+        <article class="crime reveal" style="--w:76%">
+          <div class="crime-no"><span>NO.003</span><span class="badge">反复作案</span></div>
+          <div class="ico" aria-hidden="true">🎤</div>
+          <h3>唱歌永远点同一首歌，还要唱两遍</h3>
+          <p>麦克风在他手里完成了从「娱乐设备」到「传家宝」的转变，别人只能鼓掌。</p>
+          <div class="severity">恶劣程度 <span class="bar"><i></i></span> 76</div>
+        </article>
+
+        <article class="crime reveal" style="--w:91%">
+          <div class="crime-no"><span>NO.004</span><span class="badge">经济损失</span></div>
+          <div class="ico" aria-hidden="true">💸</div>
+          <h3>说好 AA，最后总是「下次一起给」</h3>
+          <p>「下次」是一个极其遥远的日期，目前学术界的共识是：永远不会到来。</p>
+          <div class="severity">恶劣程度 <span class="bar"><i></i></span> 91</div>
+        </article>
+
+        <article class="crime reveal" style="--w:83%">
+          <div class="crime-no"><span>NO.005</span><span class="badge">嘴硬成性</span></div>
+          <div class="ico" aria-hidden="true">🗣️</div>
+          <h3>永远有理，错的永远是这个世界</h3>
+          <p>你说东他说西，你说累他说「那你早点睡啊」。逻辑闭环，无懈可击。</p>
+          <div class="severity">恶劣程度 <span class="bar"><i></i></span> 83</div>
+        </article>
+
+        <article class="crime reveal" style="--w:99%">
+          <div class="crime-no"><span>NO.006</span><span class="badge">顶级重罪</span></div>
+          <div class="ico" aria-hidden="true">😌</div>
+          <h3>被骂完还笑得出来，说「你今天好可爱」</h3>
+          <p>这就是他最强的防御：让你气到一半，突然不知道怎么继续气了。可恶。</p>
+          <div class="severity">恶劣程度 <span class="bar"><i></i></span> 99</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 证言 ================= -->
+  <section class="quotes" id="quotes" aria-label="受害者证言">
+    <div class="row a" id="rowA"></div>
+    <div class="row b" id="rowB"></div>
+  </section>
+
+  <!-- ================= 判决 ================= -->
+  <section id="verdict">
+    <div class="wrap">
+      <div class="verdict reveal" style="--p:97%">
+        <div>
+          <div class="sec-tag">FINAL JUDGEMENT</div>
+          <h3>综合混蛋指数</h3>
+          <p>由受害群众投票、路人围观热度、以及他本人拒不悔改的态度三项加权得出。</p>
+          <div class="gauge"><output id="score">0</output><span>/ 100 &nbsp;·&nbsp; 判定结果：<b style="color:var(--pink-soft)">确实是混蛋</b></span></div>
+          <div class="meter"><i></i></div>
+          <div class="meter-legend"><span>偶尔还行</span><span>有点过分</span><span>不可饶恕</span></div>
+        </div>
+        <div class="stamp" aria-label="官方印章">
+          <b>认证通过</b>
+          <small>CERTIFIED JERK · NO. 001</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 和解 ================= -->
+  <section class="heal">
+    <div class="wrap">
+      <p>当然，话说回来——骂归骂，日子还得一起过。毕竟能气你气到专门建个网站的人，也算是一种稀有人才。</p>
+      <button class="btn" id="healBtn" type="button">💛 算了，原谅他吧</button>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <p>
+        <strong>免责声明：</strong>本站为朋友之间的玩笑作品，不构成对任何人的真实指控、诽谤或人身攻击。
+        页面内容均为夸张演绎，如有雷同，说明你朋友确实有点过分。
+      </p>
+      <p class="mono">夏辰骁是混蛋.COM · xn--0rs681a04foy1ah2jyyp.com · Built with ♥ and 一点点怨气</p>
+    </div>
+    <a class="to-top" href="#top">回到顶部 ↑</a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------- 1. 控诉计数 ---------- */
+  var BASE = 23333;
+  var sueBtn = document.getElementById("sueBtn");
+  var sueCount = document.getElementById("sueCount");
+  var clicks = 0;
+  try { clicks = parseInt(localStorage.getItem("xcx-clicks") || "0", 10) || 0; } catch (e) { clicks = 0; }
+
+  function fmt(n) { return n.toLocaleString("en-US"); }
+  function renderCount() { sueCount.textContent = fmt(BASE + clicks); }
+  renderCount();
+
+  var EMOJI = ["😤", "😡", "🤬", "💢", "👊", "🔥", "😾", "💥"];
+  function boom(x, y) {
+    if (reduceMotion) return;
+    for (var i = 0; i < 7; i++) {
+      var s = document.createElement("span");
+      s.className = "pop";
+      s.textContent = EMOJI[Math.floor(Math.random() * EMOJI.length)];
+      var dx = (Math.random() - 0.5) * 160;
+      s.style.left = (x + dx) + "px";
+      s.style.top = y + "px";
+      s.style.fontSize = (18 + Math.random() * 20) + "px";
+      s.style.setProperty("--r", ((Math.random() - 0.5) * 90).toFixed(0) + "deg");
+      s.style.animationDelay = (Math.random() * 0.12).toFixed(2) + "s";
+      document.body.appendChild(s);
+      s.addEventListener("animationend", function () { this.remove(); });
+    }
+  }
+
+  if (sueBtn) {
+    sueBtn.addEventListener("click", function (e) {
+      clicks++;
+      try { localStorage.setItem("xcx-clicks", String(clicks)); } catch (err) {}
+      renderCount();
+      var r = sueBtn.getBoundingClientRect();
+      boom(r.left + r.width / 2, r.top + r.height / 2);
+      if (e.clientX) boom(e.clientX, e.clientY);
+      var labels = ["🔥 再控诉一次", "🔥 还是很气", "🔥 气到冒烟", "🔥 停不下来了", "🔥 手都点酸了"];
+      sueBtn.textContent = labels[Math.min(clicks, labels.length) - 1] || labels[labels.length - 1];
+    });
+  }
+
+  /* ---------- 2. 在线人数 ---------- */
+  var online = document.getElementById("online");
+  if (online) {
+    setInterval(function () {
+      var n = 980 + Math.floor(Math.random() * 160);
+      online.textContent = n.toLocaleString("en-US");
+    }, 3200);
+  }
+
+  /* ---------- 3. 证言跑马灯 ---------- */
+  var QUOTES = [
+    ["他说「马上到」，我信了，然后我吃完了一整顿饭。", "匿名受害者 A"],
+    ["上次借他一百块，他请我喝了杯奶茶，说扯平了。", "匿名受害者 B"],
+    ["我发九条消息，他回一个「嗯」。", "匿名受害者 C"],
+    ["他说他只是比较直，我说他只是比较会。", "匿名受害者 D"],
+    ["KTV 里他的歌永远排在第一位，第二遍也是。", "匿名受害者 E"],
+    ["他笑得一脸无辜的时候，我就知道我输了。", "匿名受害者 F"],
+    ["我：你能不能道个歉？他：我道歉你就不生气了吗？", "匿名受害者 G"],
+    ["一起看球，他支持的队赢了，我听了三小时复盘。", "匿名受害者 H"]
+  ];
+
+  function buildRow(el, list) {
+    if (!el) return;
+    var html = "";
+    // 复制两份用于无缝滚动
+    for (var pass = 0; pass < 2; pass++) {
+      for (var i = 0; i < list.length; i++) {
+        html += '<div class="quote">' + list[i][0] + "<b>—— " + list[i][1] + "</b></div>";
+      }
+    }
+    el.innerHTML = html;
+  }
+  buildRow(document.getElementById("rowA"), QUOTES);
+  buildRow(document.getElementById("rowB"), QUOTES.slice().reverse());
+
+  /* ---------- 4. 滚动出场动画 ---------- */
+  var revealEls = document.querySelectorAll(".reveal");
+
+  if (!("IntersectionObserver" in window)) {
+    Array.prototype.forEach.call(revealEls, function (el) { el.classList.add("in"); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) {
+          en.target.classList.add("in");
+          io.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.16, rootMargin: "0px 0px -8% 0px" });
+
+    Array.prototype.forEach.call(revealEls, function (el) { io.observe(el); });
+
+    // 兜底：若 2.5s 后仍无任何元素入场（极少数环境不派发观察回调），退化为滚动即时显示
+    setTimeout(function () {
+      if (document.querySelector(".reveal.in")) return;
+      var check = function () {
+        var vh = window.innerHeight || 800;
+        Array.prototype.forEach.call(document.querySelectorAll(".reveal:not(.in)"), function (el) {
+          var r = el.getBoundingClientRect();
+          if (r.top < vh * 0.92 && r.bottom > -80) el.classList.add("in");
+        });
+      };
+      check();
+      window.addEventListener("scroll", check, { passive: true });
+      window.addEventListener("resize", check, { passive: true });
+    }, 2500);
+  }
+
+  /* ---------- 5. 混蛋指数 ---------- */
+  var verdict = document.querySelector(".verdict");
+  var scoreEl = document.getElementById("score");
+  var TARGET = 97.3;
+
+  if (verdict && scoreEl) {
+    if (!("IntersectionObserver" in window)) {
+      verdict.classList.add("in");
+      scoreEl.textContent = TARGET.toFixed(1);
+    } else {
+      var vio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (!en.isIntersecting) return;
+          verdict.classList.add("in");
+          vio.unobserve(verdict);
+          if (reduceMotion) { scoreEl.textContent = TARGET.toFixed(1); return; }
+          var t0 = performance.now(), dur = 1600;
+          (function tick(now) {
+            var p = Math.min((now - t0) / dur, 1);
+            var eased = 1 - Math.pow(1 - p, 3);
+            scoreEl.textContent = (TARGET * eased).toFixed(1);
+            if (p < 1) requestAnimationFrame(tick);
+          })(t0);
+          // 兜底：无论 rAF 是否被节流，最终都落在目标值上
+          setTimeout(function () { scoreEl.textContent = TARGET.toFixed(1); }, dur + 400);
+        });
+      }, { threshold: 0.35 });
+      vio.observe(verdict);
+    }
+  }
+
+  /* ---------- 6. 卡片鼠标光斑 ---------- */
+  document.querySelectorAll(".crime").forEach(function (card) {
+    card.addEventListener("pointermove", function (e) {
+      var r = card.getBoundingClientRect();
+      card.style.setProperty("--mx", ((e.clientX - r.left) / r.width * 100).toFixed(1) + "%");
+      card.style.setProperty("--my", ((e.clientY - r.top) / r.height * 100).toFixed(1) + "%");
+    });
+  });
+
+  /* ---------- 7. 和解模式 ---------- */
+  var healBtn = document.getElementById("healBtn");
+  if (healBtn) {
+    var healed = false;
+    var glitchEl = document.querySelector("h1 .glitch");
+    var healP = document.querySelector(".heal p");
+    var healNote = healP ? healP.textContent : "";
+    var T_JERK = "夏辰骁是混蛋", T_OK = "夏辰骁其实还行";
+    var MSGS = [
+      "好了好了，这次就算了。",
+      "原谅你了，记得请吃饭。",
+      "他好像也没那么坏……吧？",
+      "气消了，但是账还记着。"
+    ];
+    var idx = 0;
+
+    healBtn.addEventListener("click", function () {
+      healed = !healed;
+      document.body.classList.toggle("healed", healed);
+
+      var t = healed ? T_OK : T_JERK;
+      glitchEl.textContent = t;
+      glitchEl.dataset.text = t;
+
+      healBtn.textContent = healed ? "😈 不，还是算了吧" : "💛 算了，原谅他吧";
+      if (healP) healP.textContent = healed ? MSGS[idx++ % MSGS.length] : healNote;
+    });
+  }
+})();
+</script>
+</body>
+</html>
