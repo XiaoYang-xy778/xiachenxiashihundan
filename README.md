@@ -1,5 +1,7 @@
 # 夏辰骁是混蛋.COM
 
+🌐 线上地址：<https://xiaoyang-xy778.github.io/xia-chenxiao-is-a-jerk/>
+
 一个纯静态、零依赖的单页网站 —— 用最严肃的排版，记录最不严肃的控诉。
 
 - 入口文件：`index.html`（HTML + CSS + JS 全部内联，双击即可打开）

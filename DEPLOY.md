@@ -25,3 +25,6 @@ git push -u origin main
 
 - `.nojekyll` 必须保留，否则 GitHub 会跳过下划线开头的文件（本站暂时没有，但保留更稳）。
 - 无需构建，没有依赖，也没有外部请求。
+> 已于 2026-11-21 部署完成，线上地址：https://xiaoyang-xy778.github.io/xia-chenxiao-is-a-jerk/
+> 仓库：https://github.com/XiaoYang-xy778/xia-chenxiao-is-a-jerk
+> 之后改内容只需 push 到 main，Pages 会自动重建。
