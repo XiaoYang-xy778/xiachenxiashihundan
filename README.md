@@ -1,11 +1,11 @@
-# 夏辰骁是混蛋.COM
+# xiachenxiashihundan.com
 
-🌐 线上地址：<https://xiaoyang-xy778.github.io/xia-chenxiao-is-a-jerk/>
+🌐 线上地址：<https://xiaoyang-xy778.github.io/xiachenxiashihundan/>
 
 一个纯静态、零依赖的单页网站 —— 用最严肃的排版，记录最不严肃的控诉。
 
 - 入口文件：`index.html`（HTML + CSS + JS 全部内联，双击即可打开）
-- 官方域名（未注册）：`夏辰骁是混蛋.com` → punycode `xn--0rs681a04foy1ah2jyyp.com`
+- 官方域名（未注册）：`xiachenxiashihundan.com`
 
 ## 功能
 
